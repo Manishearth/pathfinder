@@ -96,6 +96,18 @@
       <Filter>Content\Shaders</Filter>
     </FxCompile>
     <None Include="packages.config" />
+    <None Include="..\..\..\..\target\debug\pathfinder_hololens_demo.dll">
+      <Filter>Content</Filter>
+    </None>
+    <None Include="..\..\..\..\target\release\pathfinder_hololens_demo.dll">
+      <Filter>Content</Filter>
+    </None>
+    <None Include="..\..\..\..\target\aarch64-pc-windows-msvc\debug\pathfinder_hololens_demo.dll">
+      <Filter>Content</Filter>
+    </None>
+    <None Include="..\..\..\..\target\aarch64-pc-windows-msvc\release\pathfinder_hololens_demo.dll">
+      <Filter>Content</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />

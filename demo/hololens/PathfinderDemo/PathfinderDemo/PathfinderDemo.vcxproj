@@ -305,6 +305,18 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="..\..\..\..\target\debug\pathfinder_hololens_demo.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\..\target\release\pathfinder_hololens_demo.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\..\target\aarch64-pc-windows-msvc\debug\pathfinder_hololens_demo.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">true</DeploymentContent>
+    </None>
+    <None Include="..\..\..\..\target\aarch64-pc-windows-msvc\release\pathfinder_hololens_demo.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">true</DeploymentContent>
+    </None>
     <None Include="packages.config" />
     <None Include="PathfinderDemo_TemporaryKey.pfx" />
   </ItemGroup>

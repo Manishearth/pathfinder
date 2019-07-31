@@ -61,3 +61,6 @@ default-members = [
     "utils/svg-to-skia",
     "utils/convert",
 ]
+
+[patch.crates-io]
+cmake = { git = "https://github.com/alexcrichton/cmake-rs" }
