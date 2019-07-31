@@ -5,6 +5,7 @@ members = [
     "content",
     "demo/android/rust",
     "demo/common",
+    "demo/hololens",
     "demo/magicleap",
     "demo/native",
     "examples/canvas_glutin_minimal",

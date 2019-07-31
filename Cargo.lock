@@ -1510,6 +1510,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "pathfinder_hololens_demo"
+version = "0.1.0"
+dependencies = [
+ "egl 0.2.7 (registry+https://github.com/rust-lang/crates.io-index)",
+ "gl 0.6.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "lazy_static 1.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "pathfinder_demo 0.1.0",
+ "pathfinder_geometry 0.3.0",
+ "pathfinder_gl 0.1.0",
+ "pathfinder_gpu 0.1.0",
+]
+
+[[package]]
 name = "pathfinder_lottie"
 version = "0.1.0"
 dependencies = [
