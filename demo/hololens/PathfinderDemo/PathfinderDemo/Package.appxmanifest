@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  IgnorableNamespaces="uap mp">
+
+  <Identity Name="94b6339e-c445-4781-9cb6-8a11df857b71"
+            Publisher="CN=manis"
+            Version="1.0.0.0" />
+
+  <mp:PhoneIdentity PhoneProductId="94b6339e-c445-4781-9cb6-8a11df857b71" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+
+  <Properties>
+    <DisplayName>PathfinderDemo</DisplayName>
+    <PublisherDisplayName>manis</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.18362.0" MaxVersionTested="10.0.18362.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+        Executable="$targetnametoken$.exe"
+        EntryPoint="PathfinderDemo.AppView">
+        <uap:VisualElements
+             DisplayName="PathfinderDemo"
+             Square150x150Logo="Assets\Square150x150Logo.png" 
+             Square44x44Logo="Assets\Square44x44Logo.png" 
+             Description="PathfinderDemo"
+             BackgroundColor="#464646">
+          <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+          <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        </uap:VisualElements>
+      </Application>
+  </Applications>
+</Package>
