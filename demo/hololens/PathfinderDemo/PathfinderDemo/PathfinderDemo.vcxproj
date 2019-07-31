@@ -305,6 +305,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="packages.config" />
     <None Include="PathfinderDemo_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -331,6 +332,7 @@
     <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ImageContentTask.targets" />
     <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\MeshContentTask.targets" />
     <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ShaderGraphContentTask.targets" />
+    <Import Project="..\packages\ANGLE.WindowsStore.Servo.2.1.13\build\native\ANGLE.WindowsStore.Servo.targets" Condition="Exists('..\packages\ANGLE.WindowsStore.Servo.2.1.13\build\native\ANGLE.WindowsStore.Servo.targets')" />
   </ImportGroup>
   <PropertyGroup>
     <AppxPackageSigningEnabled>true</AppxPackageSigningEnabled>
@@ -344,5 +346,11 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\packages\cppwinrt.2017.10.13.1\build\native\cppwinrt.props') And !Exists('$(CppWinRT_IncludePath)\winrt\base.h')" Text="$([System.String]::Format('$(ErrorText)'))" />
     <Error Condition="!Exists('$(SolutionDir)\packages\cppwinrt.2017.10.13.1\build\native\cppwinrt.targets') And !Exists('$(CppWinRT_IncludePath)\winrt\base.h')" Text="$([System.String]::Format('$(ErrorText)'))" />
+  </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\ANGLE.WindowsStore.Servo.2.1.13\build\native\ANGLE.WindowsStore.Servo.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\ANGLE.WindowsStore.Servo.2.1.13\build\native\ANGLE.WindowsStore.Servo.targets'))" />
   </Target>
 </Project>
